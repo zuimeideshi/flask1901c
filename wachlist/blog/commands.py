@@ -14,7 +14,7 @@ def initdb(drop):
 @app.cli.command()
 def forge():
     db.create_all()
-    name = "zzz"
+    name = "aaa"
     movies = [
         {'title':'功夫之王','year':'2010'},
         {'title':'机器之血','year':'2015'},
@@ -55,7 +55,7 @@ def admin(username,password):
         user.set_password(password)
     else:
         click.echo('创建用户')
-        user = User(username=username,name='zzz')
+        user = User(username=username,name='aaa')
         user.set_password(password)
         db.session.add(user)
     db.session.commit()

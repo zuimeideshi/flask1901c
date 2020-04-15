@@ -8,3 +8,4 @@ env
 *.db
 htmlcov/
 .coverage
+node_modules/
