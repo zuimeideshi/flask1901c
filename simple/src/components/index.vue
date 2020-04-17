@@ -17,7 +17,7 @@
       <div class="index-left-block lastest-news">
         <h2>最新消息</h2>
         <ul>
-          <li v-for="news in NewsList">
+          <li v-for="news in newsList">
             <a v-bind:href="news.url">{{ news.title }}</a>
           </li>
         </ul>

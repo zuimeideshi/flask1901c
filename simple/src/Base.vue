@@ -2,10 +2,10 @@
   <div>
     <div class="app-head">
       <div class="app-head-inner">
-        <img src="./assets/logo.png" alt=""><span class="app-title">海马生鲜商城</span>
+        <img src="./assets/logo.png" alt=""><span class="app-title">海马3C商城</span>
         <div class="head-nav">
           <ul>
-            <li>登录</li>
+            <li v-on:click="showLoginView">登录</li>
             <li class="nav-pile">|</li>
             <li>注册</li>
             <li class="nav-pile">|</li>
@@ -22,11 +22,26 @@
     <div class="app-foot">
       <p>&copy; 1901C — 2020</p>
     </div>
+    <my-login v-show="isShowLoginView"></my-login>
   </div>
 </template>
 
 <script>
+import MyLogin from './components/myLogin'
 export default {
+  components:{
+    MyLogin
+  },
+  data() {
+    return {
+      isShowLoginView:true
+    }
+  },
+  methods: {
+    showLoginView(){
+      this.isShowLoginView = true
+    }
+  },
 };
 </script>
 
